@@ -1,0 +1,12 @@
+[package]
+name = "rusty_python"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "rust_lib"
+crate-type = ["dylib"]
+
+[dependencies]
+jsonschema = "0.17.1"
+serde_json = "1.0.108"

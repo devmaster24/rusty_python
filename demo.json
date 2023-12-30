@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Product",
+  "description": "A product in the catalog",
+  "type": "object",
+  "examples": [
+    {
+      "productId": 1,
+      "productName": "Meat Paste",
+      "productDescription": null,
+      "avaiableColours": []
+    },
+    {
+      "productId": 2,
+      "productName": "Fresh Grape",
+      "productDescription": "Just one grape, but it is fresh",
+      "avaiableColours": [
+        "black"
+      ]
+    }
+  ],
+  "properties": {
+    "productId": {
+      "type": "integer"
+    },
+    "productName": {
+      "type": "string"
+    },
+    "productDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional - additional details on the product"
+    },
+    "avaiableColours": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "blue",
+          "black",
+          "yellow"
+        ]
+      }
+    }
+  },
+  "required": [
+    "productId",
+    "productName"
+  ],
+  "additionalProperties": false
+}
